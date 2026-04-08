@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swetaprangya Sahoo | Python & Web Developer</title>
+  <meta name="description"
+    content="Personal portfolio of Swetaprangya Sahoo — Python Developer, Web Developer, MCA Student. Explore projects, skills, and experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader-content">
+      <div class="loader-logo">&lt;&gt;</div>
+      <div class="loader-bar">
+        <div class="loader-fill" id="loaderFill"></div>
+      </div>
+      <p class="loader-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">♡𝓢𝔀𝓮𝓽𝓪𝓹𝓻𝓪𝓷𝓰𝔂𝓪♡</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" title="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-image-wrapper reveal">
+        <div class="hero-image-glow"></div>
+        <img src="swetapic png.png" alt="Swetaprangya Sahoo" class="hero-image" id="heroImg" />
+        <button class="edit-profile-btn" id="editProfileBtn" title="Edit Profile Picture">
+          <i class="fas fa-camera"></i>
+        </button>
+      </div>
+      <div class="hero-text reveal">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Swetaprangya Sahoo</h1>
+        <p class="hero-typing">
+          <span id="typingText"></span><span class="cursor-blink">|</span>
+        </p>
+        <p class="hero-summary">A passionate developer crafting elegant solutions with Python and modern web
+          technologies.</p>
+        <div class="hero-buttons" style="display: flex; align-items: center; gap: 1rem; justify-content: center;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <a href="#" class="btn btn-primary" id="downloadResumeBtn" target="_blank" download="Resume.pdf">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <button class="section-edit-btn" id="editResumeBtn" style="width: 36px; height: 36px; flex-shrink: 0;" title="Edit Resume File/Link">
+              <i class="fas fa-pen"></i>
+            </button>
+          </div>
+          <a href="#projects" class="btn btn-outline">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Sweta2810485" target="_blank" class="social-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/swetaprangyasahoo/" target="_blank" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:sahoo.swetaprangya.2002@gmail.com" class="social-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-title-row reveal">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="section-edit-btn" id="editAboutBtn" title="Edit About Text & Facts">
+            <i class="fas fa-pen"></i> Text
+          </button>
+          <button class="section-edit-btn" id="editHighlightsBtn" title="Edit Highlight Cards">
+            <i class="fas fa-layer-group"></i> Cards
+          </button>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p id="aboutPara1">
+            I'm <strong>Swetaprangya Sahoo</strong>, an MCA student with a deep passion for building impactful software.
+            With a strong foundation in Python programming, web development, and data structures, I bring both technical
+            proficiency and creative problem-solving to every project.
+          </p>
+          <p id="aboutPara2">
+            My experience spans from building functional web applications to completing real-world internships in Python
+            development and web technologies. I'm constantly pushing boundaries, learning new tools, and turning ideas
+            into reality.
+          </p>
+          <div class="about-facts">
+            <div class="fact-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h4>Education</h4>
+                <p id="factEducation">MCA Student</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p id="factLocation">Odisha, India</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <h4>Experience</h4>
+                <p id="factExperience">2 Internships</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-certificate"></i>
+              <div>
+                <h4>Certifications</h4>
+                <p id="factCertifications">4+ Certificates</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="highlight-card glass-card">
+            <i class="fab fa-python"></i>
+            <h3>Python Development</h3>
+            <p>Building scripts, data analysis tools, and backend applications.</p>
+          </div>
+          <div class="highlight-card glass-card">
+            <i class="fas fa-globe"></i>
+            <h3>Web Development</h3>
+            <p>Creating responsive, modern interfaces with HTML, CSS, and JavaScript.</p>
+          </div>
+          <div class="highlight-card glass-card">
+            <i class="fas fa-database"></i>
+            <h3>Database Management</h3>
+            <p>Designing and managing relational databases using MySQL.</p>
+          </div>
+          <div class="highlight-card glass-card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>DSA</h3>
+            <p>Solid understanding of data structures and algorithms in C/Java/Python.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-title-row reveal">
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <button class="section-edit-btn" id="editSkillsBtn" title="Edit Skills">
+          <i class="fas fa-pen"></i> Edit
+        </button>
+      </div>
+      <p class="section-subtitle reveal">Technologies and tools I work with</p>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Programming Languages -->
+        <div class="skills-group reveal">
+          <h3 class="skills-group-title"><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skill-item">
+            <div class="skill-info"><span>Python</span><span>80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80" style="--color: #3776AB"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Java</span><span>80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80" style="--color: #f89820"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>C</span><span>75%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75" style="--color: #A8B9CC"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Web Technologies -->
+        <div class="skills-group reveal">
+          <h3 class="skills-group-title"><i class="fas fa-laptop-code"></i> Web Development</h3>
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML5</span><span>90%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="90" style="--color: #E34F26"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>CSS3</span><span>85%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85" style="--color: #1572B6"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>JavaScript</span><span>75%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75" style="--color: #F7DF1E"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Other Skills -->
+        <div class="skills-group reveal">
+          <h3 class="skills-group-title"><i class="fas fa-tools"></i> Tools & Others</h3>
+          <div class="skill-item">
+            <div class="skill-info"><span>MySQL</span><span>80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80" style="--color: #4479A1"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Data Structures</span><span>78%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="78" style="--color: #a855f7"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Git & GitHub</span><span>72%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="72" style="--color: #F05032"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tech Badges Row -->
+      <div class="tech-badges reveal">
+        <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+        <span class="tech-badge"><i class="fab fa-java"></i> Java</span>
+        <span class="tech-badge"><i class="fab fa-html5"></i> HTML5</span>
+        <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+        <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
+        <span class="tech-badge"><i class="fab fa-git-alt"></i> Git</span>
+        <span class="tech-badge"><i class="fab fa-github"></i> GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-title-row reveal">
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <button class="section-edit-btn" id="editProjectsBtn" title="Edit Projects">
+          <i class="fas fa-pen"></i> Edit
+        </button>
+      </div>
+      <p class="section-subtitle reveal">Things I've built with passion</p>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1: To-Do List -->
+        <div class="project-card glass-card tilt-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <img src="project1.png" alt="To-Do List Web App" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank"><i class="fas fa-external-link-alt"></i> Live
+                Demo</a>
+              <a href="https://github.com/Sweta2810485" class="btn btn-sm btn-outline" target="_blank"><i
+                  class="fab fa-github"></i>
+                GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>To-Do List Web App</h3>
+            <p>A feature-rich task management app with add, delete, edit, and completion tracking. Includes local
+              storage persistence and smooth animations.</p>
+            <div class="project-badges">
+              <span class="badge badge-html">HTML</span>
+              <span class="badge badge-css">CSS</span>
+              <span class="badge badge-js">JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2: Flashcard App -->
+        <div class="project-card glass-card tilt-card reveal" data-category="web python">
+          <div class="project-img-wrapper">
+            <img src="project2.png" alt="Flashcard Web App" class="project-img" />
+            
+            <div class="project-img-placeholder">
+              <i class="fas fa-layer-group"></i>
+              <span>Flashcard App</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank"><i class="fas fa-external-link-alt"></i> Live
+                Demo</a>
+              <a href="https://github.com/Sweta2810485" class="btn btn-sm btn-outline" target="_blank"><i
+                  class="fab fa-github"></i>
+                GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Flashcard Web App</h3>
+            <p>An interactive flashcard study platform with card-flip animations, study mode, and category management.
+              Concept inspired by Django-backed architectures.</p>
+            <div class="project-badges">
+              <span class="badge badge-html">HTML</span>
+              <span class="badge badge-css">CSS</span>
+              <span class="badge badge-js">JavaScript</span>
+              <span class="badge badge-python">Python</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3: Portfolio -->
+        <div class="project-card glass-card tilt-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <img src="project3.png" alt="portfolio Web App" class="project-img" />
+
+            <div class="project-img-placeholder alt">
+              <i class="fas fa-user-circle"></i>
+              <span>Portfolio Website</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank"><i class="fas fa-external-link-alt"></i> Live
+                Demo</a>
+              <a href="https://github.com/Sweta2810485" class="btn btn-sm btn-outline" target="_blank"><i
+                  class="fab fa-github"></i>
+                GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Personal Portfolio</h3>
+            <p>This very portfolio website — a modern, animated, glassmorphism-styled personal showcase built with pure
+              HTML, CSS, and JavaScript.</p>
+            <div class="project-badges">
+              <span class="badge badge-html">HTML</span>
+              <span class="badge badge-css">CSS</span>
+              <span class="badge badge-js">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-title-row reveal">
+        <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+        <button class="section-edit-btn" id="editExperienceBtn" title="Edit Experience">
+          <i class="fas fa-pen"></i> Edit
+        </button>
+      </div>
+      <p class="section-subtitle reveal">Internships &amp; Professional Journey</p>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Python Developer Intern</h3>
+                <h4>CTTC Bhubaneswar</h4>
+              </div>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2023</span>
+            </div>
+            <p>Worked on Python-based development projects at Centre for Development of Advanced Computing (CTTC).
+              Gained hands-on experience with Python programming, scripting, and real-world application development
+              workflows.</p>
+            <div class="timeline-tags">
+              <span class="tech-badge small"><i class="fab fa-python"></i> Python</span>
+              <span class="tech-badge small"><i class="fas fa-terminal"></i> Scripting</span>
+              <span class="tech-badge small"><i class="fas fa-project-diagram"></i> Application Dev</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Web Development Intern</h3>
+                <h4>InternPe</h4>
+              </div>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024</span>
+            </div>
+            <p>Completed a structured web development internship at InternPe, building and deploying responsive web
+              applications. Strengthened expertise in frontend technologies and modern UI/UX principles.</p>
+            <div class="timeline-tags">
+              <span class="tech-badge small"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="tech-badge small"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="tech-badge small"><i class="fab fa-js"></i> JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS SECTION ===== -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-title-row reveal">
+        <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+        <button class="section-edit-btn" id="editCertificationsBtn" title="Edit Certifications">
+          <i class="fas fa-pen"></i> Edit
+        </button>
+      </div>
+      <p class="section-subtitle reveal">Credentials that validate my expertise</p>
+      <div class="certs-grid">
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
+          <h3>Python Programming</h3>
+          <p>Certification in Python fundamentals, OOP, and advanced concepts.</p>
+          <span class="cert-issuer">CTTC Bhubaneswar</span>
+          <a href="#" class="btn btn-sm btn-outline btn-verify">Verify <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon"><i class="fas fa-globe"></i></div>
+          <h3>Web Development</h3>
+          <p>Full-stack web development certification covering HTML, CSS, and JavaScript.</p>
+          <span class="cert-issuer">InternPe</span>
+          <a href="#" class="btn btn-sm btn-outline btn-verify">Verify <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <h3>NPTEL (Industry 4.0 & IIoT)</h3>
+          <p>NPTEL certified in Industry 4.0 & IIoT (Elite, 76%) with knowledge of IoT, automation, and smart manufacturing.
+          </p>
+          <span class="cert-issuer">Online Platform</span>
+          <a href="#" class="btn btn-sm btn-outline btn-verify">Verify <i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Data Structures & Algorithms</h3>
+          <p>Advanced DSA concepts, problem-solving in C and Java.</p>
+          <span class="cert-issuer">Online Platform</span>
+          <a href="#" class="btn btn-sm btn-outline btn-verify">Verify <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-title-row reveal">
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <button class="section-edit-btn" id="editContactBtn" title="Edit Contact Info">
+          <i class="fas fa-pen"></i> Edit
+        </button>
+      </div>
+      <p class="section-subtitle reveal">I'd love to hear from you. Let's create something amazing together!</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:sahoo.swetaprangya.2002@gmail.com">sahoo.swetaprangya.2002@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/swetaprangyasahoo/" target="_blank">linkedin.com/in/swetaprangya</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/Sweta2810485" target="_blank">github.com/swetaprangya</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="text" id="name" name="name" placeholder="Your full name" />
+            </div>
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="your@email.com" />
+            </div>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="fas fa-comment-dots"></i>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <span class="error-msg" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">&lt;Ss&gt;</div>
+        <p>Crafted with <i class="fas fa-heart" style="color:#f472b6"></i> by Swetaprangya Sahoo</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Sweta2810485" target="_blank" class="social-icon"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/swetaprangyasahoo/" target="_blank" class="social-icon"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:sahoo.swetaprangya.2002@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Swetaprangya Sahoo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Success Popup -->
+  <div class="popup-overlay" id="successPopup">
+    <div class="popup glass-card">
+      <div class="popup-icon"><i class="fas fa-check-circle"></i></div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for reaching out. I'll get back to you soon!</p>
+      <button class="btn btn-primary" id="closePopup">Awesome!</button>
+    </div>
+  </div>
+
+  <!-- Edit Profile Picture Modal -->
+  <div class="popup-overlay" id="editProfileModal">
+    <div class="popup glass-card edit-profile-modal">
+      <button class="modal-close-btn" id="closeEditModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-user-edit"></i></div>
+      <h3>Edit Profile Picture</h3>
+      <p>Choose a new photo to update your profile picture.</p>
+      <div class="profile-preview-wrapper">
+        <img src="profile.png" alt="Preview" class="profile-preview-img" id="profilePreviewImg" />
+        <label for="profileImageInput" class="profile-upload-label">
+          <i class="fas fa-cloud-upload-alt"></i> Choose Image
+        </label>
+        <input type="file" id="profileImageInput" accept="image/*" style="display:none" />
+      </div>
+      <p class="preview-hint" id="previewHint">Preview will appear above</p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="cancelEditBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveProfileBtn" disabled>
+          <i class="fas fa-save"></i> Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit About Me Modal -->
+  <div class="popup-overlay" id="editAboutModal">
+    <div class="popup glass-card edit-about-modal">
+      <button class="modal-close-btn" id="closeAboutModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-user-edit"></i></div>
+      <h3>Edit About Me</h3>
+
+      <div class="edit-about-form">
+        <div class="edit-field-group">
+          <label for="editPara1">Bio — Paragraph 1</label>
+          <textarea id="editPara1" rows="4" placeholder="First paragraph about yourself..."></textarea>
+        </div>
+        <div class="edit-field-group">
+          <label for="editPara2">Bio — Paragraph 2</label>
+          <textarea id="editPara2" rows="3" placeholder="Second paragraph about your experience..."></textarea>
+        </div>
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editEducation"><i class="fas fa-graduation-cap"></i> Education</label>
+            <input type="text" id="editEducation" placeholder="e.g. MCA Student" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editLocation"><i class="fas fa-map-marker-alt"></i> Location</label>
+            <input type="text" id="editLocation" placeholder="e.g. Odisha, India" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editExperience"><i class="fas fa-briefcase"></i> Experience</label>
+            <input type="text" id="editExperience" placeholder="e.g. 2 Internships" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editCertifications"><i class="fas fa-certificate"></i> Certifications</label>
+            <input type="text" id="editCertifications" placeholder="e.g. 4+ Certificates" />
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="cancelAboutBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveAboutBtn">
+          <i class="fas fa-save"></i> Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Skills Modal -->
+  <div class="popup-overlay" id="editSkillsModal">
+    <div class="popup glass-card edit-skills-modal">
+      <button class="modal-close-btn" id="closeSkillsModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-tools"></i></div>
+      <h3>Edit Skills</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; text-align: center;">Format:
+        <strong>Skill Name, Percentage</strong> (e.g., Python, 85)
+      </p>
+
+      <div class="edit-skills-form">
+        <div class="edit-field-group">
+          <label for="editSkillsGroup1"><i class="fas fa-code"></i> Programming Languages</label>
+          <textarea id="editSkillsGroup1" rows="4"></textarea>
+        </div>
+        <div class="edit-field-group">
+          <label for="editSkillsGroup2"><i class="fas fa-laptop-code"></i> Web Development</label>
+          <textarea id="editSkillsGroup2" rows="4"></textarea>
+        </div>
+        <div class="edit-field-group">
+          <label for="editSkillsGroup3"><i class="fas fa-tools"></i> Tools & Others</label>
+          <textarea id="editSkillsGroup3" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top: 1.5rem;">
+        <button class="btn btn-outline" id="cancelSkillsBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveSkillsBtn">
+          <i class="fas fa-save"></i> Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Projects Modal -->
+  <div class="popup-overlay" id="editProjectsModal">
+    <div class="popup glass-card edit-projects-modal" style="max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close-btn" id="closeProjectsModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-laptop-code"></i></div>
+      <h3>Edit Projects</h3>
+
+      <div class="edit-projects-controls"
+        style="margin-bottom: 1rem; display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
+        <select id="projectSelector"
+          style="padding: 0.5rem; border-radius: 5px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; width: 100%; max-width: 250px;">
+          <option value="new">-- Add New Project --</option>
+        </select>
+        <button class="btn btn-sm btn-primary" id="addNewProjectBtn" title="New Project"
+          style="padding: 0.5rem 0.75rem;"><i class="fas fa-plus"></i></button>
+        <button class="btn btn-sm btn-outline" id="deleteProjectBtn"
+          style="display:none; border-color: #ef4444; color: #ef4444; padding: 0.5rem 0.75rem;"
+          title="Delete Project"><i class="fas fa-trash"></i></button>
+      </div>
+
+      <div class="edit-projects-form" style="text-align: left;">
+        <div class="edit-field-group">
+          <label for="editProjectName">Project Name</label>
+          <input type="text" id="editProjectName" placeholder="e.g. Portfolio Website" />
+        </div>
+        <div class="edit-field-group">
+          <label for="editProjectDesc">Description</label>
+          <textarea id="editProjectDesc" rows="3" placeholder="Brief description..."></textarea>
+        </div>
+        <div class="edit-field-group">
+          <label>Project Image (Optional)</label>
+          <div class="profile-preview-wrapper"
+            style="margin-top:0.5rem; margin-bottom:1rem; border-radius:10px; overflow:hidden; position:relative;">
+            <img src="" alt="Preview" class="profile-preview-img" id="projectPreviewImg"
+              style="border-radius:10px; object-fit:cover; width:100%; height:160px; display:none;" />
+            <div id="projectPlaceholderIcon"
+              style="height:160px; background:rgba(255,255,255,0.05); display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--text-muted); font-size:2rem; border-radius:10px;">
+              <i class="fas fa-image"></i>
+              <span style="font-size: 0.8rem; margin-top: 0.5rem;">No Image Selected</span>
+            </div>
+            <label for="projectImageInput" class="profile-upload-label"
+              style="bottom:10px; right:10px; padding: 0.4rem 0.8rem; font-size: 0.8rem;">
+              <i class="fas fa-cloud-upload-alt"></i> Upload
+            </label>
+            <input type="file" id="projectImageInput" accept="image/*" style="display:none" />
+          </div>
+        </div>
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editProjectCategories">Filter Categories <small>(e.g. web python)</small></label>
+            <input type="text" id="editProjectCategories" placeholder="web python" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editProjectBadges">Tech Badges <small>(e.g. HTML, CSS)</small></label>
+            <input type="text" id="editProjectBadges" placeholder="HTML, CSS, JavaScript" />
+          </div>
+        </div>
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editProjectDemo">Live Demo Link</label>
+            <input type="text" id="editProjectDemo" placeholder="https://..." value="#" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editProjectGithub">GitHub Link</label>
+            <input type="text" id="editProjectGithub" placeholder="https://github.com/..." value="#" />
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top: 1.5rem;">
+        <button class="btn btn-outline" id="cancelProjectsBtn">Done / Close</button>
+        <button class="btn btn-primary" id="saveProjectBtn">
+          <i class="fas fa-save"></i> Save Project
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Experience Modal -->
+  <div class="popup-overlay" id="editExperienceModal">
+    <div class="popup glass-card edit-experience-modal" style="max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close-btn" id="closeExperienceModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-briefcase"></i></div>
+      <h3>Edit Experience</h3>
+
+      <div class="edit-projects-controls"
+        style="margin-bottom: 1rem; display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
+        <select id="experienceSelector"
+          style="padding: 0.5rem; border-radius: 5px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; width: 100%; max-width: 250px;">
+          <option value="new">-- Add New Experience --</option>
+        </select>
+        <button class="btn btn-sm btn-primary" id="addNewExperienceBtn" title="New Experience"
+          style="padding: 0.5rem 0.75rem;"><i class="fas fa-plus"></i></button>
+        <button class="btn btn-sm btn-outline" id="deleteExperienceBtn"
+          style="display:none; border-color: #ef4444; color: #ef4444; padding: 0.5rem 0.75rem;"
+          title="Delete Experience"><i class="fas fa-trash"></i></button>
+      </div>
+
+      <div class="edit-projects-form" style="text-align: left;">
+        <div class="edit-field-group">
+          <label for="editExpTitle">Job Title</label>
+          <input type="text" id="editExpTitle" placeholder="e.g. Web Development Intern" />
+        </div>
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editExpCompany">Company / Organization</label>
+            <input type="text" id="editExpCompany" placeholder="e.g. InternPe" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editExpYear">Year / Duration</label>
+            <input type="text" id="editExpYear" placeholder="e.g. 2024 or 2023-2024" />
+          </div>
+        </div>
+        <div class="edit-field-group">
+          <label for="editExpDesc">Description</label>
+          <textarea id="editExpDesc" rows="4"
+            placeholder="Describe your responsibilities and achievements..."></textarea>
+        </div>
+        <div class="edit-field-group">
+          <label for="editExpTags">Skills / Tags <small>(comma separated)</small></label>
+          <input type="text" id="editExpTags" placeholder="e.g. HTML5, CSS3, JavaScript" />
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top: 1.5rem;">
+        <button class="btn btn-outline" id="cancelExperienceBtn">Done / Close</button>
+        <button class="btn btn-primary" id="saveExperienceBtn">
+          <i class="fas fa-save"></i> Save Experience
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Certifications Modal -->
+  <div class="popup-overlay" id="editCertificationsModal">
+    <div class="popup glass-card edit-certifications-modal" style="max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close-btn" id="closeCertificationsModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-certificate"></i></div>
+      <h3>Edit Certifications</h3>
+
+      <div class="edit-projects-controls"
+        style="margin-bottom: 1rem; display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
+        <select id="certSelector"
+          style="padding: 0.5rem; border-radius: 5px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; width: 100%; max-width: 250px;">
+          <option value="new">-- Add New Certification --</option>
+        </select>
+        <button class="btn btn-sm btn-primary" id="addNewCertBtn" title="New Certification"
+          style="padding: 0.5rem 0.75rem;"><i class="fas fa-plus"></i></button>
+        <button class="btn btn-sm btn-outline" id="deleteCertBtn"
+          style="display:none; border-color: #ef4444; color: #ef4444; padding: 0.5rem 0.75rem;"
+          title="Delete Certification"><i class="fas fa-trash"></i></button>
+      </div>
+
+      <div class="edit-projects-form" style="text-align: left;">
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editCertTitle">Certification Name</label>
+            <input type="text" id="editCertTitle" placeholder="e.g. Python Programming" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editCertIcon">Icon Class <small>(e.g. fab fa-python)</small></label>
+            <input type="text" id="editCertIcon" placeholder="fas fa-certificate" />
+          </div>
+        </div>
+        <div class="edit-field-group">
+          <label for="editCertIssuer">Issuer / Provider</label>
+          <input type="text" id="editCertIssuer" placeholder="e.g. Coursera, CTTC" />
+        </div>
+        <div class="edit-field-group">
+          <label for="editCertDesc">Description</label>
+          <textarea id="editCertDesc" rows="3" placeholder="Brief description of skills covered..."></textarea>
+        </div>
+        <div class="edit-field-group">
+          <label for="editCertLink">Google Drive Certificate Link</label>
+          <input type="text" id="editCertLink" placeholder="e.g. https://drive.google.com/..." />
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top: 1.5rem;">
+        <button class="btn btn-outline" id="cancelCertificationsBtn">Done / Close</button>
+        <button class="btn btn-primary" id="saveCertificationsBtn">
+          <i class="fas fa-save"></i> Save Certification
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Contact Modal -->
+  <div class="popup-overlay" id="editContactModal">
+    <div class="popup glass-card edit-contact-modal" style="max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close-btn" id="closeContactModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-address-book"></i></div>
+      <h3>Edit Contact Info</h3>
+
+      <div class="edit-projects-form" style="text-align: left; margin-top: 1rem;">
+        <div class="edit-field-group">
+          <label for="editContactEmail">Email Address</label>
+          <input type="text" id="editContactEmail" placeholder="your.email@example.com" />
+        </div>
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editContactLinkedinName">LinkedIn Display Text</label>
+            <input type="text" id="editContactLinkedinName" placeholder="linkedin.com/in/username" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editContactLinkedinUrl">LinkedIn URL</label>
+            <input type="text" id="editContactLinkedinUrl" placeholder="https://linkedin.com/in/..." />
+          </div>
+        </div>
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editContactGithubName">GitHub Display Text</label>
+            <input type="text" id="editContactGithubName" placeholder="github.com/username" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editContactGithubUrl">GitHub URL</label>
+            <input type="text" id="editContactGithubUrl" placeholder="https://github.com/..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top: 1.5rem;">
+        <button class="btn btn-outline" id="cancelContactBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveContactBtn">
+          <i class="fas fa-save"></i> Save Details
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Resume Modal -->
+  <div class="popup-overlay" id="editResumeModal">
+    <div class="popup glass-card edit-resume-modal">
+      <button class="modal-close-btn" id="closeResumeModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-file-pdf"></i></div>
+      <h3>Edit Resume Link</h3>
+      <p>Provide a URL (like Google Drive) OR upload a light PDF file directly.</p>
+      
+      <div class="edit-projects-form" style="text-align: left; margin-top: 1rem;">
+        <div class="edit-field-group">
+          <label for="editResumeLink">External Link <small>(Google Drive, etc.)</small></label>
+          <input type="text" id="editResumeLink" placeholder="https://drive.google.com/..." />
+        </div>
+        
+        <div style="text-align: center; margin: 1rem 0; color: var(--text-muted); font-size: 0.9rem;">
+          &mdash; OR &mdash;
+        </div>
+
+        <div class="edit-field-group">
+          <label>Upload Direct File <small>(Max ~2MB recommended)</small></label>
+          <div class="profile-preview-wrapper" style="margin-top:0.5rem; background:rgba(255,255,255,0.05); border-radius:10px; padding: 1rem; text-align:center;">
+             <div id="resumeFileStatus" style="margin-bottom: 1rem; color: #a78bfa; font-weight: bold;">
+               No file uploaded yet.
+             </div>
+             <label for="resumeFileInput" class="btn btn-outline btn-sm" style="cursor: pointer;">
+               <i class="fas fa-cloud-upload-alt"></i> Choose File
+             </label>
+             <input type="file" id="resumeFileInput" accept=".pdf,.doc,.docx" style="display:none" />
+             <button class="btn btn-outline btn-sm" id="clearResumeFileBtn" style="border-color: #ef4444; color: #ef4444; margin-left: 0.5rem; display:none;" title="Clear File">
+               <i class="fas fa-trash"></i>
+             </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top: 1.5rem;">
+        <button class="btn btn-outline" id="cancelResumeBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveResumeBtn">
+          <i class="fas fa-save"></i> Save Option
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Highlights Modal -->
+  <div class="popup-overlay" id="editHighlightsModal">
+    <div class="popup glass-card edit-highlights-modal" style="max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close-btn" id="closeHighlightsModal" title="Close"><i class="fas fa-times"></i></button>
+      <div class="popup-icon edit-icon"><i class="fas fa-layer-group"></i></div>
+      <h3>Edit Highlight Cards</h3>
+      
+      <div class="edit-projects-controls" style="margin-bottom: 1rem; display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
+        <select id="highlightSelector" style="padding: 0.5rem; border-radius: 5px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; width: 100%; max-width: 250px;">
+          <option value="new">-- Add New Card --</option>
+        </select>
+        <button class="btn btn-sm btn-primary" id="addNewHighlightBtn" title="New Card" style="padding: 0.5rem 0.75rem;"><i class="fas fa-plus"></i></button>
+        <button class="btn btn-sm btn-outline" id="deleteHighlightBtn" style="display:none; border-color: #ef4444; color: #ef4444; padding: 0.5rem 0.75rem;" title="Delete Card"><i class="fas fa-trash"></i></button>
+      </div>
+
+      <div class="edit-projects-form" style="text-align: left;">
+        <div class="edit-facts-row">
+          <div class="edit-field-group">
+            <label for="editHighlightTitle">Card Title</label>
+            <input type="text" id="editHighlightTitle" placeholder="e.g. Python Development" />
+          </div>
+          <div class="edit-field-group">
+            <label for="editHighlightIcon">Icon Class <small>(e.g. fab fa-python)</small></label>
+            <input type="text" id="editHighlightIcon" placeholder="fas fa-code" />
+          </div>
+        </div>
+        <div class="edit-field-group">
+          <label for="editHighlightDesc">Description</label>
+          <textarea id="editHighlightDesc" rows="3" placeholder="Brief description..."></textarea>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="margin-top: 1.5rem;">
+        <button class="btn btn-outline" id="cancelHighlightsBtn">Done / Close</button>
+        <button class="btn btn-primary" id="saveHighlightsBtn">
+          <i class="fas fa-save"></i> Save Card
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
